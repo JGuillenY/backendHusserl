@@ -1,0 +1,29 @@
+ul#navbar-menu:hover{
+    color: rgba(0,0,0,.2);   
+}
+
+ul.nav li.nav-item a{
+    color: rgba(0,0,0,.7);
+}
+
+a.nav-link {
+    padding: 5px 10px;
+}
+
+ul.nav{
+    overflow: hidden;
+    background: none;
+}
+
+ul.nav li.nav-item:hover{
+    background: none;
+}
+
+div#myTabContent{
+    padding : 0px 2.5%;
+    height: 100%;
+    height: -moz-available;          /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    height: fill-available;
+    overflow-y : scroll;
+}

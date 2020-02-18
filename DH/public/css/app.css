@@ -1,0 +1,98 @@
+input{
+    height: auto;
+    padding: 2px 8px;
+}
+
+div.card{
+    border:none;
+}
+
+div.card div.card-header{
+    background-color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    opacity: .75;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey;  */
+    /* border: 1px rgba(0,0,0, .05) solid; */
+    /* border-radius: 10px; */
+    opacity: .75;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(20, 10, 10, .3); 
+    /* border-radius: 10px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 10, 10, .5); 
+}
+
+@font-face {
+    font-family: DHTitle;
+    src: url(../fuentes/CASTELAR.ttf);
+}
+
+h1{
+    font-family: DHTitle;
+    font-weight: bolder;
+}
+
+a{
+    color: rgb(50, 50, 50);
+    opacity: .7;
+    transition: opacity .2s ease-in-out;
+}
+
+a:hover{
+    color: #007bff;
+    opacity: 1;
+}
+
+div.contenidoC{
+    padding: 50px 50px 0px 50px;
+    overflow-y: scroll;
+    height: 84vh;
+}
+
+a.lang-icon{
+    position: absolute;
+    right: 22px;
+    top: calc(11vh - 52px);
+    /* //top: 17px; */
+    z-index: 10;
+}
+
+ul#langlist{
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+ul#langlist li{
+    margin : 10px 0;
+}
+
+a.lang-iconA img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    box-shadow: rgba(0,0,0,.5) 2px 2px 12px -1px;
+    color: rgba(1,1,1,1);
+}
+
+a.lang-icon img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: rgba(0,0,0,.5) 2px 2px 12px -1px;
+    color: rgba(1,1,1,1);
+}

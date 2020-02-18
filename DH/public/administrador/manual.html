@@ -1,0 +1,104 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Español</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Alemán</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="english-tab" data-toggle="tab" href="#english" role="tab" aria-controls="english" aria-selected="false">Inglés</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="french-tab" data-toggle="tab" href="#french" role="tab" aria-controls="french" aria-selected="false">Francés</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="catalan-tab" data-toggle="tab" href="#catalan" role="tab" aria-controls="catalan" aria-selected="false">Catalán</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div id="main-view" class="container" style="margin:0;max-width: 100vw;">
+            <div class="row" style="text-align: center;margin: 20px;">
+                <h3 class="col">Guía</h3>
+                <hr/>
+            </div>
+            <div class="row">
+                <textarea class="col" id="mainEditar"></textarea>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary col" onclick="guardar()">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div id="mainD-view" class="container" style="margin:0;max-width: 100vw;">
+            <div class="row" style="text-align: center;margin: 20px;">
+                <h3 class="col">Führer</h3>
+                <hr/>
+            </div>
+            <div class="row">
+                <textarea class="col" id="mainDEditar"></textarea>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary col" onclick="guardarD()">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
+        <div id="mainE-view" class="container" style="margin:0;max-width: 100vw;">
+            <div class="row" style="text-align: center;margin: 20px;">
+                <h3 class="col">Guide</h3>
+                <hr/>
+            </div>
+            <div class="row">
+                <textarea class="col" id="mainEEditar"></textarea>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary col" onclick="guardarE()">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="french" role="tabpanel" aria-labelledby="french-tab">
+        <div id="mainF-view" class="container" style="margin:0;max-width: 100vw;">
+            <div class="row" style="text-align: center;margin: 20px;">
+                <h3 class="col">Guide</h3>
+                <hr/>
+            </div>
+            <div class="row">
+                <textarea class="col" id="mainFEditar"></textarea>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary col" onclick="guardarF()">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="catalan" role="tabpanel" aria-labelledby="catalan-tab">
+        <div id="mainC-view" class="container" style="margin:0;max-width: 100vw;">
+            <div class="row" style="text-align: center;margin: 20px;">
+                <h3 class="col">Guide</h3>
+                <hr/>
+            </div>
+            <div class="row">
+                <textarea class="col" id="mainCEditar"></textarea>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary col" onclick="guardarC()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+#main-view, #mainD-view, #mainE-view, #mainF-view, #mainC-view{
+    max-width: 980px !important;
+    text-align: center !important;
+    margin-left: calc(50% - 490px) !important;
+}
+#cke_mainEditar, #cke_mainDEditar, #cke_mainEEditar, #cke_mainFEditar, #cke_mainCEditar{
+    width: 100%;
+}
+</style>
+<!-- <script src="../ckeditorFull/ckeditor.js"></script>
+<script src="../ckeditorFull/adapters/jquery.js"></script> -->
+<script src="../ckeditorFull/ckeditor.js"></script>
+<script src="../ckeditorFull/adapters/jquery.js"></script>
+<script src="js/manual.js"></script>

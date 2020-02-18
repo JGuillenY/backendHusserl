@@ -1,0 +1,81 @@
+body{
+    text-align: center;
+    max-height: 100vh;
+}
+
+div#background{
+    background-image: url("../images/fondo.jpeg");
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.5;
+    /* filter: blur(1px) */
+}
+
+header{
+    /* height: 32vh; */
+    padding-top: 20px;
+}
+
+header h5#sub{
+    margin-top: 5vh;
+}
+
+
+
+div#login-body{
+    min-height: 55vh;
+    margin-top: 10vh;
+}
+
+div.login-card{
+    transition: visibility .5s ease-in-out;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+div.login-card form{
+    text-align: right;   
+    margin-bottom: 20px;
+}
+
+div.login-card form div.form-group{
+    text-align: left;   
+}
+
+/* Pantalla Chica */
+@media only screen and (max-width: 578px) {
+    div.login-card{
+        position: relative;
+        width: 100%;
+        padding: 0px 20px ;
+    } 
+}
+
+/* Pantalla Grande */
+@media only screen and (min-width: 578px) {
+    div.login-card{
+        position: relative;
+        width: 36%;
+        left: 32%;
+    }   
+}
+
+div#alert{
+    /* position: fixed; */
+    width: 100%;
+}
+
+img.edmundImg{
+    border-radius: 50%;
+    border: 6px rgba(145, 10, 20, .75) solid;
+    margin: 15px 0px 20px 0px;
+    width: 33%;
+    max-width: 220px;
+    max-height: 48vh;
+}
+
+a.btn.btn-secondary{
+    margin-bottom: 25px;
+}

@@ -1,0 +1,18 @@
+﻿DROP TABLE public.users;
+
+CREATE TABLE public.users
+(
+  id SERIAL,
+  nombre character varying(310) NOT NULL DEFAULT ''::character varying,
+  apellidoP character varying(310) NOT NULL DEFAULT ''::character varying,
+  apellidoM character varying(310) NOT NULL DEFAULT ''::character varying,
+  institucion character varying(140) NOT NULL DEFAULT ''::character varying,
+  email character varying(300) NOT NULL DEFAULT ''::character varying,
+  pais character varying(300) NOT NULL DEFAULT ''::character varying,
+  grado character varying(510) NOT NULL DEFAULT ''::character varying,
+  user_password character varying(200) NOT NULL DEFAULT ''::character varying,
+  lastaccess timestamp without time zone NOT NULL DEFAULT now(),
+  registro  timestamp without time zone NOT NULL,
+  CONSTRAINT users_pkey PRIMARY KEY (id),
+  CONSTRAINT email_users_key UNIQUE (email)
+);

@@ -1,0 +1,1 @@
+ALTER TABLE referencia ADD COLUMN clave VARCHAR; 

@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Diccionario Husserl</title>
+        <meta name="description" content="Diccionario Husserl">
+        <meta name="author" content="Jesus Guillen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Bootstrap-->
+        <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+        <!--Hoja de Estilos Principal de la App-->
+        <!-- <link rel="stylesheet" href="../css/vendor.css"> -->
+        <link rel="stylesheet" href="../css/app.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        <div id="background"></div>
+        <header>
+            <div style="position: fixed; top: 0; right : 0;z-index: 10;">
+                <a class="lang-icon" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                    <i class="fas fa-globe fa-2x"></i>
+                </a>
+                <div class="collapse" id="collapseExample2" style="margin-top: 60px;">
+                    <div class="card card-body" style="background: none;">
+                        <ul id="langlist">
+                            <li><a class="lang-iconA" href="#" onclick="toDeutsch(true)"><img src="images/germany.png"/></a></li>
+                            <li><a class="lang-iconA" href="#" onclick="toSpanish(true)"><img src="images/spain.png"/></a></li>
+                            <li><a class="lang-iconA" href="#" onclick="toEnglish(true)"><img src="images/england.png"/></a></li>
+                            <li><a class="lang-iconA" href="#" onclick="toFrench(true)"><img src="images/french.png"/></a></li>
+                            <li><a class="lang-iconA" href="#" onclick="toCatalan(true)"><img src="images/catalan.png"/></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h1 lang="es">Diccionario Husserl</h1>
+            <hr style="border-top:1px solid rgba(0,0,0,.3);"/>
+            <h6 id="sub" lang="es" data-lang-token="subtitulo-login">
+                Léxico bilingüe (alemán y español) de expresiones definidas a partir de las obras de Edmund Husserl (1859-1938)
+            </h6>
+            <!-- <img src="images/husserl.jpg" class="edmundImg"> -->
+            <div class="alertT"></div>
+        </header>
+        <!-- <a lang="es" data-lang-token="ingresar-portal" class="btn btn-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Ingresar
+        </a> -->
+        <!-- <div class="collapse" id="collapseExample"> -->
+            <div id="login-body">
+                <div id="ingreso" class="login-card">
+                    <strong lang="es">INICIO</strong>
+                    <form :submit="this.login($event)">
+                        <div class="form-group">
+                            <label for="loginInputEmail" lang="es">Correo Electrónico</label>
+                            <input required :data="user" type="email" class="form-control" id="loginInputEmail" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginInputPassword" lang="es">Contraseña</label>
+                            <input required :data="password" type="password" class="form-control" id="loginInputPassword" >
+                            <small id="emailHelp" class="form-text text-muted"><a href="#" lang="es" data-lang-token="olvido-password" data-toggle="modal" data-target="#olvidoPasswordModal">¿Olvidó su contraseña?</a></small>
+                        </div>
+                        <button type="submit" lang="es" class="btn btn-secondary">Ingresar</button>
+                    </form>
+                    <span lang="es" data-lang-token="no-registrado">¿No está registrado? Regístrese </span><a id="hereButton" :click="this.toggleLoginView()" lang="es" href="#">aquí</a>
+                </div>
+                <!-- Registro -->
+                <div id="registro" class="login-card" style="display: none;">
+                    <strong lang="es">REGISTRO</strong>
+                    <!-- <form :submit="this.signup($event)"> -->
+                    <form onsubmit="validate(event)">
+                        <div class="form-group">
+                            <label for="regInputNombre" lang="es">Nombre</label>
+                            <input :data="nombre" type="text" class="form-control" id="exampleInputEmail1" title="Es necesario que escriba su nombre.">
+                        </div>
+                        <div class="form-group">
+                            <label for="regInputApellidoS" lang="es" data-lang-token="apellidos">Apellido(s)</label>
+                            <input :data="apellidoS" type="text" class="form-control" id="regInputApellidoS" title="Es necesario que escriba sus apellidos.">
+                        </div>
+                        <div class="form-group">
+                            <label for="regInputInstitucion" lang="es" data-lang-token="inst-esc">Institución / Escuela</label>
+                            <input :data="institucion" type="text" class="form-control" id="regInputInstitucion" title="Es necesario que escriba su Institución o escuela.">
+                        </div>
+                        <div class="form-group">
+                            <label for="regInputGrado" lang="es" data-lang-token="grad-puesto">Grado Académico / Puesto</label>
+                            <input :data="grado" type="text" class="form-control" id="regInputGrado" title="Es necesario que escriba su grado académico o puesto.">
+                        </div>
+                        <div class="form-group">
+                            <label for="regInputPais" lang="es">País</label>
+                            <input :data="pais" type="text" class="form-control" id="regInputPais" title="Es necesario que escriba su país de orígen.">
+                        </div>
+                        <div class="form-group">
+                            <label for="regInputEmail" lang="es">Correo Electrónico</label>
+                            <input :data="email" type="email" class="form-control" id="regInputEmail" title="Es necesario que escriba su correo electrónico.">
+                        </div>
+                        <div class="form-group">
+                            <label for="regInputPassword" lang="es">Contraseña</label>
+                            <input :data="password" type="password" class="form-control" id="regInputPassword" title="Es necesario que escriba su contraseña.">
+                        </div>
+                        <div class="form-group">
+                            <label for="regInputConfirm" lang="es" data-lang-token="comprobacion">Comprobación de contraseña</label    >
+                            <input :data="comprobacion" type="password" class="form-control" id="regInputConfirm" title="Es necesario que escriba sus contraseña.">
+                        </div>
+                        <button type="submit" class="btn btn-secondary" lang="es">Registrarse</button>
+                    </form>
+                    <span lang="es" data-lang-token="no-registrado">¿Ya está registrado? Ingrese </span><a :click="this.toggleLoginView()" lang="es" href="#">aquí</a>
+                </div>
+                <div class="alertT"></div>
+            <!-- </div> -->
+        </div>
+        <h6>
+            <span lang="es" data-lang-token="tit1">El proyecto del Diccionario Husserl es desarrollado por Antonio Zirión Quijano en el </span><a target="_blank" href="http://www.filosoficas.unam.mx" lang="es" data-lang-token="tit2">Instituto de Investigaciones Filosóficas</a><span lang="es" data-lang-token="tit3"> de la </span><a href="http://www.unam.mx" target="_blank" lang="es" data-lang-token="tit4">Universidad Nacional Autónoma de México</a>.
+        </h6>
+        <footer>
+            <small lang="es" data-lang-token="footer">© Antonio Zirión Quijano, 2018. Derechos reservados conforme a la ley.</small>
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="olvidoPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form onsubmit="restaurarPwd(event)">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle" lang="es" data-lang-token="recuperarC">Recuperar Contraseña</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <span lang="es" data-lang-token="recuperarCBody">Para recuperar su contraseña, es necesario que ingrese su correo electrónico:</span>
+                        <div class="form-group">
+                            <!-- <label for="exampleInputEmail1" lang="es">Correo Electrónico</label> -->
+                            <input type="email" class="form-control" id="exampleInputEmail">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" lang="es">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" lang="es">Recuperar</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" id="loading-content" style="text-align: center;">
+                    <img src="images/Facebook-1s-200px.svg" style="width:75px;"/><br/>
+                    <span>Validando Correo Electrónico</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    <!-- Aqui se pondra provisionalmente el script que sera el definitivo.
+    <script src="dist/bundle.js"></script>
+    -->
+    <!--Librerias-->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-view/dist/jquery-view.js"></script>
+    <script src="../node_modules/jquery-lang-js/js/jquery-lang.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../js/vendor.js"></script> -->
+    <!--Codigo de la aplicacion-->
+    <script src="../js/localStorage.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/langConfig.js"></script>
+    <script src="../js/configuration.js"></script>
+    <!-- <script src="../js/app.js"></script> -->
+    <script src="js/login.js"></script>
+</html>

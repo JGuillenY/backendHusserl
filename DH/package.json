@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/dhusserl"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "btoa-atob": "^0.1.2",
+    "connect": "^3.6.6",
+    "constantinople": "^4.0.1",
+    "cookie-parser": "^1.4.3",
+    "create-html": "^4.1.0",
+    "debug": "~2.6.9",
+    "email-templates": "^5.0.1",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.1.6",
+    "express-session": "^1.15.6",
+    "html-pdf": "^2.2.0",
+    "html-to-text": "^4.0.0",
+    "http-errors": "^1.6.3",
+    "jade": "^1.11.0",
+    "morgan": "^1.9.1",
+    "nodemailer": "^4.6.8",
+    "nodemon": "^2.0.2",
+    "npm": "^6.7.0",
+    "pg": "^7.4.3",
+    "pg-promise": "^8.4.6",
+    "phantom-html-to-pdf": "^0.5.6",
+    "pm2": "^3.2.2",
+    "pug": "^2.0.3",
+    "randomstring": "^1.1.5"
+  },
+  "devDependencies": {
+    "fs": "0.0.1-security"
+  }
+}

@@ -1,0 +1,255 @@
+/* a.lang-icon img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: rgba(0,0,0,.5) 2px 2px 12px -1px;
+    color: rgba(1,1,1,1);
+}
+
+ul.nav li.nav-item{
+    font-size: .85em;
+    height: 32px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+
+div#navbarSupportedContent{
+    z-index: 100;
+}
+
+ul#navbar-menu:hover{
+    color: rgba(0,0,0,.2);
+}
+
+ul.nav li.nav-item a{
+    color: rgba(0,0,0,.7);
+}
+
+a.nav-link {
+    padding: 5px 10px;
+} */
+
+div.indice div.indice-letra{
+    text-align: center;
+    border-right: 1px rgba(0,0,0,.1) solid;
+    margin: 15px 0px;
+    height: 100%;
+    position: fixed;
+}
+
+div#content-body{
+    height: 84vh;
+}
+
+/* div#alfabeto-view{
+    height: 84vh;
+    overflow-y: scroll;
+} */
+
+/* Pantalla Grande */
+@media only screen and (min-width: 574px) {
+    div#alfabeto-view{
+        height: 84vh;
+        overflow-y: scroll;
+    }
+
+    nav#side-view{
+        background: rgba(0,0,0, .05);
+        height: 84vh;
+        overflow-y: hidden;
+    }
+}
+
+a.referencias1{
+    font-weight: bolder;
+}
+
+a.referencias2{
+    font-size: .9em;
+}
+
+div#loading img{
+    width: 85px;
+}
+
+div.renglon{
+    min-height: 40px;
+    /* border-top: 1px rgba(0,0,0, .5) solid; */
+    padding-left: 10px;
+}
+
+div.renglon a{
+    font-size: .8em;
+}
+
+div.renglon p{
+    margin-bottom: 5px;
+}
+
+div.renglon small{
+    font-size: 10px;
+    font-weight: 800;
+}
+
+div.titulo{
+    padding-top: 15px;
+    height: 100%;
+    background: rgba(0,0,0,.1);
+    padding-bottom: 10px;
+    border-top: 1px rgba(0,0,0,.1) solid;
+    border-bottom: 1px rgba(0,0,0,.1) solid;
+}
+
+div.abuelos{
+    height: 100%;
+    background: rgba(0,0,0,.05);
+    border-bottom: 1px rgba(0,0,0,.1) dashed;
+}
+
+div.expresion{
+    height: 100%;
+    background: rgba(0,0,0,.01);
+    border-bottom: 1px rgba(0,0,0,.1) dashed;
+}
+
+div.hijos{
+    background: rgba(0,0,0,.005);
+    border-bottom: 1px rgba(0,0,0,.1) solid;
+}
+
+div.hijos ul{
+    height: 14vh;
+    overflow-y: scroll;
+    padding-left: 0px;
+    list-style: none;
+}
+
+div#ultimos-view{
+    /* border-top: 1px rgba(0,0,0, .5) solid; */
+    margin-top: 10px;
+    padding: 0px 3px 0px 10px;
+}
+
+li.ultimos-pasajes{
+    list-style: none;
+}
+
+li.ultimos-pasajes a{
+    font-size: .8em;
+}
+
+div#pasajes-view{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+div#tutorial{
+    position: absolute;
+    /* will-change: transform; */
+    top: 5px;
+    left: 55px;
+    /* transform: translate3d(542px, 1794px, 0px); */
+    max-width: 276px;
+    margin-left: .5rem;
+    z-index: 2000;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+div.card div.card-header{
+    background-color: rgb(245,245,245);
+}
+
+div.card div.card-header:hover{
+    background-color: rgb(235,235,235);
+}
+
+div.card div.card-header.selected{
+    background-color: rgb(220, 220, 220);
+}
+
+div#tutorial.hidd{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+a#jerarqplus, a#ultimasplus{
+    margin-top: 3px;
+    font-size: 1em;
+}
+
+div.hidden {
+  display:none;
+}
+
+div.card-header h6 a p{
+  display : inline;
+}
+
+/* Pantalla Grande */
+@media only screen and (min-width: 574px) { 
+    div#loading{
+        position: absolute;
+        left: calc(50% - 50px);
+        top: calc(50vh - 100px);
+    }
+
+    div#cuerpo{
+        margin-left : 12%;
+    } 
+
+    a#down-arr{
+	display : none;
+    }
+}
+
+@media only screen and (max-width: 574px) {
+    div#alfabeto-view{
+        height: 50vh;
+        overflow-y: scroll !important;
+    }
+
+    div#alfabeto-view.full{
+        height: 83vh;
+        overflow-y: scroll !important;
+    }
+
+    nav#side-view{
+        background: rgba(0,0,0, .05);
+        height: 34vh;
+        overflow-y: scroll !important;
+        border-top: 1px rgb(210,210,210) solid;
+    }
+    
+    div.indice div.indice-letra{
+	border-right: none;
+    	max-width: 14.66%;
+    }
+
+    div#loading{
+        position: absolute;
+        left: calc(50% - 70px);
+        top: calc(50vh - 185px);
+    }
+
+    div#cuerpo{
+	margin-left : 12%;
+	padding-right : 0;
+    }
+
+    h3#indexLetter{
+	margin-left: 5px;
+    }
+
+    a#down-arr{
+	position: absolute;
+	left: calc(50% - 12px);
+	top: calc(66vh - 10px);
+	z-index: 2;
+    }	 
+
+    a#down-arr.full{
+        top: calc(99vh - 10px);
+    }
+}

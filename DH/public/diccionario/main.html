@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title lang="es">Diccionario Husserl</title>
+        <meta name="description" content="Diccionario Husserl">
+        <meta name="author" content="Jesus Guillen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Bootstrap-->
+        <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <!-- <link rel="stylesheet" href="../css/fontawesome/css/all.min.css"> -->
+        <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+        <!-- <link rel="stylesheet" href="../css/vendor.css"> -->
+        <!--Hoja de Estilos Principal de la App-->
+        <link rel="stylesheet" href="../css/app.css">
+        <link rel="stylesheet" href="css/common.css">
+    </head>
+    <body style="max-height: 100vh;overflow-y: hidden;">
+        <div id="main-loading">
+        </div>
+        <div id="whole-content" style="display:hidden;">
+            <header id="menu-view">
+                <nav id="main-bar" class="navbar">
+                    <a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#" style="
+                    color: rgba(0,0,0,.4);">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </a>
+    
+                    <h1 class="d-none d-md-block" id="maintitle" style="color:white;margin-right: 60px;margin-top: 10px;">Diccionario Husserl</h1>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 300px">
+                        <a class="dropdown-item" onclick="javascript:changeView('alfabeto')">    
+                            <div class="row">                        
+                                <div class="col-10">
+                                    <span id="dict">Diccionario</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" onclick="javascript:changeView('acerca_de')">
+                            <div class="row">
+                                <div class="col-10">
+                                    <span id="acer">Acerca del Diccionario</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" onclick="javascript:changeView('manual')">
+                            <div class="row">
+                                <div class="col-10">
+                                    <span id="gui">Guía</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#" onclick="signOut()">
+                            <div class="row">
+                                <div class="col-10">
+                                    <span id="sali">Salir</span>
+                                </div>
+                                <div class="col-2">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="position: fixed; top: 0; right : 0;z-index: 10;">
+                        <a class="lang-icon" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                            <i class="fas fa-globe fa-2x"></i>
+                        </a>
+                        <div class="collapse" id="collapseExample2" style="margin-top: 60px;">
+                            <div class="card card-body" style="background: none;">
+                                <ul id="langlist">
+                                    <li><a id="btn-de" class="lang-iconA" href="#" onclick="toDeutsch(true)"><img src="images/germany.png"/></a></li>
+                                    <li><a id="btn-es" class="lang-iconA" href="#" onclick="toSpanish(true)"><img src="images/spain.png"/></a></li>
+                                    <li><a id="btn-en" class="lang-iconA" href="#" onclick="toEnglish(true)"><img src="images/england.png"/></a></li>
+                                    <li><a id="btn-fr" class="lang-iconA" href="#" onclick="toFrench(true)"><img src="images/french.png"/></a></li>
+                                    <li><a id="btn-ca" class="lang-iconA" href="#" onclick="toCatalan(true)"><img src="images/catalan.png"/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div id="sub-loading">
+            </div>
+            <div id="main-content" style="display:hidden;">
+            </div>
+        </div>
+    </body>
+    <!-- Aqui se pondra provisionalmente el script que sera el definitivo.
+    <script src="dist/bundle.js"></script>
+    -->
+  <!--  <script src="../dist/vendor.js"></script>
+    <script src="../dist/app.js"></script> -->
+    <!--Librerias-->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-view/dist/jquery-view.js"></script>
+    <script src="../../node_modules/jquery-scrollTo/dist/jquery-scrollTo.min.js"></script> 
+    <script src="../node_modules/jquery-lang-js/js/jquery-lang.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../js/vendor.js"></script> -->
+    <!--Codigo de la aplicacion-->
+    <script src="../js/localStorage.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/langConfig.js"></script>
+    <script src="../js/configuration.js"></script>
+    <script src="../js/initialCheck.js"></script>
+    <script src="js/main.js"></script>
+</html>

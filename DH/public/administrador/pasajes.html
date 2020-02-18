@@ -1,0 +1,108 @@
+
+<div class="row" id="content-body" style="margin:0; overflow: hidden;height: 87vh !important;">
+    <div class="col-3">
+        <div id="busqueda-view" class="input-group mb-3" style="margin-top: 15px">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <span class="fas fa-search" id="search"></span>
+                </div>
+            </div>
+            <input id="busqueda" lang="es" onkeyup="aplicaBusqueda()" type="text" class="form-control" placeholder="Búsqueda" aria-label="Busqueda" aria-describedby="busqueda">
+        </div>
+        <div id="alfabeto-view" class="indice row" id="indice" style="height: 78vh;">
+            <!-- <div class="indice-letra">
+                <h3>{{opcionSeleccionada}}</h3>
+            </div> -->
+            <div class="col" style="padding:0;">
+                <div id="expresiones">
+                    <div class="card" :repeat="expresion in expresiones" id="pasaje{{expresion.ref_id}}">
+                        <div class="card-header" id="expresion{{expresion.ref_id}}">
+                            <h6 class="mb-0 row" style="font-size:1em;">
+                                <a href="#" :click="this.selectExpresion(expresion)" style="color:black;" class="col">
+                                {{expresion.ref_id}} : {{expresion.ref_libro_de}} // {{expresion.ref_libro_es}}
+                                </a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 15px;position: fixed;text-align: center;width: 75%;left: 25%;" id="add-header">
+        <button class="btn btn-secondary" style="width: 80%;" onclick="newPasaje()">Nuevo Pasaje</button>
+        <hr/>
+    </div>
+    <div id="pasaje-view" style="text-align: center; overflow-y: scroll;margin-top: 71px;padding-top: 15px;height:87%;" class="col">
+        <!-- <div style="margin-top: 20px;" id="add-header">
+            <button class="btn btn-secondary" style="width: 100%;" onclick="newPasaje()">Nuevo Pasaje</button>
+            <hr/>
+        </div> -->
+        <div class="pasaje-login" style="margin-top : -20px;">
+            <img src="images/Facebook-1s-200px.gif">
+        </div>
+        <div class="row">
+            <input id="ref_id" type="text" class="form-control col-10" value="{{expresionSeleccionada.ref_id}}" disabled>  
+            <!-- <h3 class="col-10">{{expresionSeleccionada.ref_id}}</h3> -->
+            <a href="#" onclick="deletePasaje()" class="col-2" style="padding-top:8px;"><i class="fas fa-trash fa-lg"></i></a>
+        </div>
+        <br/>
+        <div class="row">
+            <ul class="nav nav-tabs" style="width: 100%;background: white; overflow: hidden;" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="aleman-tab" data-toggle="tab" href="#aleman" role="tab" aria-controls="aleman" aria-selected="false">Alemán</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="espaniol-tab" data-toggle="tab" href="#espaniol" role="tab" aria-controls="espaniol" aria-selected="true">Español</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent" style="width: 100%;">
+                <div class="tab-pane fade" id="aleman" role="tabpanel" aria-labelledby="aleman-tab">
+                    <div id="main-view" class="container" style="margin:0;max-width: 100vw;">
+                        <div class="row" style="text-align: center;margin: 20px;">
+                            <select class="form-control col-2" id="clave">
+                                <option value="PW">PW</option>
+                                <option value="I1">I1</option>
+                                <option value="I2">I2</option>
+                                <option value="PV">PV</option>
+                                <option value="CM">CM</option>
+                                <option value="IP">IP</option>
+            </select>
+                            <input id="ref_libro_de" type="text" class="form-control col-10" value="{{expresionSeleccionada.ref_libro_de}}">
+                            <hr/>
+                        </div>
+                        <div class="row">
+                            <textarea class="col" id="mainEditar"></textarea>
+                        </div>
+                        <div style="text-align:right; margin-top: 15px;">
+                            <button class="btn btn-secondary" style="width: 33%;" onclick="guardar()">Guardar <i class="fas fa-save"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show active" id="espaniol" role="tabpanel" aria-labelledby="espaniol-tab">
+                    <div id="mainD-view" class="container" style="margin:0;max-width: 100vw;">
+                        <div class="row" style="text-align: center;margin: 20px;">
+                            <select class="form-control col-2" id="clave_es">
+                                <option value="PW">PW</option>
+                                <option value="I1">I1</option>
+                                <option value="I2">I2</option>
+                                <option value="PV">PV</option>
+                                <option value="CM">CM</option>
+                            </select>
+                            <input id="ref_libro_es" type="text" class="form-control col-10" value="{{expresionSeleccionada.ref_libro_es}}">
+                            <hr/>
+                        </div>
+                        <div class="row">
+                            <textarea class="col" id="mainDEditar"></textarea>
+                        </div>
+                        <div class="row">
+                            <button style="margin-left: 10%;width: 80%;margin-top: 5px;" class="btn btn-secondary" onclick="guardar()">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../ckeditorFull/ckeditor.js"></script>
+<script src="../ckeditorFull/adapters/jquery.js"></script>
+<script src="js/pasajes.js"></script>

@@ -1,0 +1,331 @@
+body{
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+/* Pantalla Grande */
+@media only screen and (min-width: 574px) {
+    a#toggleView{
+        display : none !important;
+    }
+
+    .download{
+    	position: absolute;
+    	left: 12px;
+    	top: 5px;
+    }
+}
+
+
+div.card-header h6 a p {
+    display: inline;
+}
+
+h4.pasaje-subtitulo strong p{
+    display: inline;
+}
+
+div.indice div.indice-letra{
+    text-align: center;
+    border-right: 1px rgba(0,0,0,.1) solid;
+    margin: 15px 0px;
+    height: 100%;
+    position: fixed;
+}
+
+nav#side-view{
+    background: rgba(0,0,0, .05);
+    height: 84vh;
+    overflow-y: hidden;
+}
+
+div#content-body{
+    height: 84vh;
+}
+
+div#alfabeto-view{
+    padding-left:0;
+    height: 84vh;
+    overflow-y: scroll;
+    border-right: 1px rgba(0,0,0, .15) solid;
+}
+
+a.referencias1{
+    font-size: .8em;
+    font-weight: bolder;
+}
+
+a.referencias2{
+    font-size: .75em;
+}
+
+div#loading{
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50vh - 100px);
+}
+
+div#loading img{
+    width: 85px;
+}
+
+div.renglon{
+    min-height: 40px;
+    /* border-top: 1px rgba(0,0,0, .5) solid; */
+    padding-left: 10px;
+}
+
+div.renglon a{
+    font-size: .8em;
+}
+
+div.renglon p{
+    margin-bottom: 5px;
+}
+
+div.renglon small{
+    font-size: 10px;
+    font-weight: 800;
+}
+
+div.titulo{
+    padding-top: 15px;
+    height: 100%;
+    background: rgba(0,0,0,.1);
+    padding-bottom: 10px;
+    border-top: 1px rgba(0,0,0,.1) solid;
+    border-bottom: 1px rgba(0,0,0,.1) solid;
+}
+
+div.abuelos{
+    height: 100%;
+    background: rgba(0,0,0,.05);
+    border-bottom: 1px rgba(0,0,0,.1) dashed;
+}
+
+div.expresion{
+    height: 100%;
+    background: rgba(0,0,0,.01);
+    border-bottom: 1px rgba(0,0,0,.1) dashed;
+}
+
+div.hijos{
+    background: rgba(0,0,0,.005);
+    border-bottom: 1px rgba(0,0,0,.1) solid;
+}
+
+div.hijos ul{
+    height: 14vh;
+    overflow-y: scroll;
+    padding-left: 0px;
+    list-style: none;
+}
+
+div#ultimos-view{
+    /* border-top: 1px rgba(0,0,0, .5) solid; */
+    margin-top: 10px;
+    padding: 0px 3px 0px 10px;
+}
+
+li.ultimos-pasajes{
+    list-style: none;
+    border-bottom: 1px lightgray dashed;
+}
+
+li.ultimos-pasajes a{
+    font-size: .8em;
+}
+
+div#pasajes-view{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+div.right-arrow{
+    height: 100%;
+    width: 15px;
+    position: absolute;
+    margin-left: -5px;
+}
+
+div.left-arrow{
+    width: 15px;
+    position: absolute;
+    right: -26px;
+}
+
+a.left-arrowL.open{
+    left: calc(25% + 1px);
+}
+
+a.left-arrowL.closed{
+    left: 4px;
+}
+
+a.right-arrowL.open{
+    right: 25%;
+}
+
+a.right-arrowL.closed{
+    right: 0%;
+}
+
+a.right-arrowL, a.left-arrowL{
+    top: calc(50% - -58px);
+    position: absolute;
+    cursor: pointer;
+    z-index: 11;
+}
+
+div.pasaje-login{
+    position: fixed;
+    background: white;
+    width: 50%;
+    height: 100%;
+    margin-top: 0px;
+    z-index: 20;
+}
+
+div.pasaje-login img{
+    width: 100px;
+    left: calc(50% - 50px);
+    top: 30%;
+    position: relative;
+}
+
+.lang{
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+
+div.card-header:hover{
+    background-color : rgb(205, 240, 205) !important;
+}
+
+.selected{
+    background-color : rgb(189, 222, 187) !important;
+}
+
+div.card-header.selected a{
+    opacity: 1;
+    text-decoration: underline;
+}
+
+
+div.card-header.selected:hover{
+    background-color : rgb(165, 205, 165) !important;
+}
+
+div#pasaje-view{
+    height: 84vh;
+    padding:0px;
+    /* overflow-y: scroll; */
+}
+
+div#pasajeContent{
+    padding-top: 45px;
+    height: 84vh;
+    /* overflow-y: scroll; */
+    width: 100%;
+}
+
+div#main-pasajes-content p.pasaje-orig, div#main-pasajes-content p.pasaje-trad{
+    height: calc(64.8vh - 60px);
+    margin-bottom: 1vh;
+    overflow-y: scroll;
+    padding: 0px 15px;
+}
+
+div#closed-pasajes.open, div#open-pasajes.open{
+    display: block;
+}
+
+div#closed-pasajes.closed, div#open-pasajes.closed{
+    display: none;
+}
+
+
+div.card div.card-header{
+    background-color: rgb(230,230,230);
+}
+
+h6{
+    font-size : .9em;
+}
+
+.visited{
+    color: rgb(100, 30, 30);
+    text-decoration: underline;
+    font-weight: 550;
+}
+
+.page-item.selected{
+
+}
+
+div.hidden {
+  display:none;
+}
+
+
+a#jerarqplus, a#ultimasplus{
+    margin-top: 3px;
+    font-size: 1em;
+}
+
+/* Pantalla Chica */
+@media only screen and (max-width: 574px) {
+    a.right-arrowL{
+        display: none !important;
+    }
+
+    a.left-arrowL{
+        display: none !important;
+    }
+
+/*    div#side-view{
+        display: none !important;
+    }*/
+
+    div#busqueda-view{
+        width: 100% !important;
+    }
+
+    div#alfabeto-view{
+        height: 32vh !important;
+        border-bottom: 1px rgb(210,210,210) solid !important;
+    }
+
+    div#pasaje-view{
+        height: 87vh !important;
+//        overflow: scroll !important;
+    }
+
+    a#toggleView{
+	position: absolute;
+    	left: 0px !important;
+    	top: calc(11vh + 32px);
+    	z-index: 100;
+    	width: 40px;
+    	padding-left: 4px;
+    	height: 38px;
+    	padding-top: 4px;
+    	background-color: white;
+    }
+
+    .smallHide{
+	display: none !important;
+    }
+
+    div#busqueda-view{
+	width: calc(100% - 40px) !important;
+    	margin-left: 40px;
+    }
+
+    .download{
+    	position: absolute;
+    	left: 48px;
+    	top: 3px;
+    }
+}

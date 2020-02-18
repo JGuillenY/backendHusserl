@@ -1,0 +1,79 @@
+body{
+    text-align: center;
+}
+
+header{
+    height: 31vh;
+    padding-top: 20px;
+}
+
+header h5#sub{
+    margin-top: 5vh;
+}
+
+a.lang-icon{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+a.lang-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+div#login-body{
+    min-height: 55vh;
+}
+
+footer{
+    height: calc(9vh - 1px);
+    text-align: left;
+    background: #38673d;
+}
+
+footer small{
+    position: relative;
+    bottom: -29%;
+    left: 4%;
+    color: white;
+}
+
+div.login-card{
+    transition: visibility .5s ease-in-out;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+div.login-card form{
+    text-align: right;   
+    margin-bottom: 20px;
+}
+
+div.login-card form div.form-group{
+    text-align: left;   
+}
+
+/* Pantalla Chica */
+@media only screen and (max-width: 578px) {
+    div.login-card{
+        position: relative;
+        width: 100%;
+        padding: 0px 20px ;
+    } 
+}
+
+/* Pantalla Grande */
+@media only screen and (min-width: 578px) {
+    div.login-card{
+        position: relative;
+        width: 36%;
+        left: 32%;
+    }   
+}
+
+div#alert{
+    position: fixed;
+    width: 100%;
+}
