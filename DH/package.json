@@ -22,7 +22,7 @@
     "http-errors": "^1.6.3",
     "jade": "^1.11.0",
     "morgan": "^1.9.1",
-    "nodemailer": "^4.6.8",
+    "nodemailer": "^6.4.16",
     "nodemon": "^2.0.2",
     "npm": "^6.7.0",
     "pg": "^7.4.3",
